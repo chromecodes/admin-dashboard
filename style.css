@@ -1,0 +1,59 @@
+.container {
+  display: grid;
+  grid-template-columns: 0.8fr 3fr 1fr;
+  grid-template-rows: 1fr 1fr 3fr 3fr;
+  grid-template-areas:
+    "dashboard header header"
+    "dashboard actionbar actionbar"
+    "dashboard yourprojects announcement"
+    "dashboard yourprojects trending";
+}
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+.dashboard {
+  background-color: deepskyblue;
+  color: white;
+  grid-area: dashboard;
+}
+.sub,
+.sub0 {
+  display: flex;
+  align-items: center;
+}
+.header {
+  grid-area: header;
+}
+input[type="search"] {
+  height: 28px;
+  width: 450px;
+  border-radius: 10px;
+  background-color: rgb(213, 228, 233);
+  border: none;
+  padding-left: 10px;
+}
+input[type="search"]:focus {
+  outline: none;
+}
+.actionbar {
+  grid-area: actionbar;
+}
+.yourprojects::before {
+  content: "Your Projects";
+  color: black;
+  font-size: 18px;
+  position: absolute;
+}
+.yourprojects {
+  grid-area: yourprojects;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+}
+.announcement {
+  grid-area: announcement;
+}
+.trending {
+  grid-area: trending;
+}
